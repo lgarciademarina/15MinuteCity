@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 15MinuteCity
 
-## Getting Started
+A modern Next.js app that visualizes the 15-minute city concept for Spain using geospatial accessibility data.
 
-First, run the development server:
+Live demo: https://15minutecity.vercel.app/
+
+![Visualizador](image.png)
+
+## What it does
+
+- Shows a 15-minute city accessibility dashboard for selected map points.
+- Uses POI and category statistics to compute a local accessibility score.
+- Displays summary metrics such as:
+  - Overall accessibility score
+  - Diversity and reachability
+  - Travel time counts for 5, 10 and 15 minute thresholds
+  - Category group and top category breakdowns
+- Converts map coordinates from Web Mercator (`EPSG:3857`) to geographic coordinates (`EPSG:4326`).
+- Looks up the selected location name via reverse geocoding.
+
+## Technologies
+
+- **Next.js 16** (React 19)
+- **TypeScript**
+- **Tailwind CSS** for styling
+- **Recharts** for charts and visual analytics
+- **Turf** for geospatial utilities
+- **API backends** with Next.js API routes
+
+## Key features
+
+- Interactive UI for exploring point-of-interest accessibility
+- Responsive sidebar with charts and stat summaries
+- Map-based coordinate selection and analysis
+- Data-driven category scoring and metrics visualization
+
+## Project structure
+
+- `app/` – Next.js app routes and layout
+- `src/components/POISideMenu.tsx` – dashboard panel with statistics
+- `pages/api/` – OpenRouteService API endpoint for isochrones and POI's
+- `public/` – static assets
+- `src/types/` – global type declarations
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 after starting the dev server.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+## Notes
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is deployed on Vercel at https://15minutecity.vercel.app/.
