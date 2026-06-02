@@ -14,7 +14,7 @@ export default function Page() {
     }, []);
 
     useEffect(() => {
-        if (!hasMounted || !window.IDEE || !blocking) return;
+        if (!hasMounted || !blocking) return;
 
         const handleInit = () => {
             setBlocking(false);
@@ -28,11 +28,7 @@ export default function Page() {
 
     return (
         <>
-        {!blocking && (
-            <Viewer />
-        )
-
-        }
+        { !blocking && ( <Viewer /> ) }
         </>
     );
 }
