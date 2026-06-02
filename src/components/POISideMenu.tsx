@@ -31,7 +31,7 @@ export default function POISideMenu({
   const [position, setPosition] = useState<{ lon: number | null; lat: number | null; }>({ lon: null, lat: null, });
       
   useEffect(() => {
-    if ( !coordinates?.length || coordinates.length !== 2 || typeof window === 'undefined' || !window.ol ) return;
+    if ( !coordinates?.length || coordinates.length !== 2 ) return;
         
     const [lon, lat] = window.ol.proj.transform( coordinates, 'EPSG:3857', 'EPSG:4326' );
     setPosition({ lon, lat });
