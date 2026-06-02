@@ -1,0 +1,241 @@
+{
+    "accommodation": {
+        "code": 100,
+        "subcategories": {
+        "hotel": 101,
+        "motel": 102,
+        "guest_house": 103,
+        "hostel": 104,
+        "apartment": 105,
+        "camping": 106,
+        "resort": 107,
+        "chalet": 108,
+        "alpine_hut": 109,
+        "caravan_site": 110
+        }
+    },
+    "animals": {
+        "code": 120,
+        "subcategories": {
+        "veterinary": 121,
+        "animal_shelter": 122,
+        "pet_shop": 123,
+        "dog_park": 124
+        }
+    },
+    "arts_and_culture": {
+        "code": 130,
+        "subcategories": {
+        "museum": 131,
+        "gallery": 132,
+        "theatre": 133,
+        "arts_centre": 134,
+        "library": 135,
+        "music_venue": 136,
+        "cultural_centre": 137,
+        "cinema": 138
+        }
+    },
+    "education": {
+        "code": 150,
+        "subcategories": {
+        "kindergarten": 151,
+        "childcare": 152,
+        "school": 153,
+        "college": 154,
+        "university": 155,
+        "language_school": 156,
+        "music_school": 157,
+        "driving_school": 158,
+        "library": 159
+        }
+    },
+    "facilities": {
+        "code": 160,
+        "subcategories": {
+        "toilets": 161,
+        "shower": 162,
+        "drinking_water": 163,
+        "bench": 164,
+        "shelter": 165,
+        "telephone": 166,
+        "parcel_locker": 167,
+        "recycling": 168,
+        "waste_basket": 169
+        }
+    },
+    "financial": {
+        "code": 190,
+        "subcategories": {
+        "bank": 191,
+        "atm": 192,
+        "bureau_de_change": 193,
+        "insurance": 194
+        }
+    },
+    "healthcare": {
+        "code": 200,
+        "subcategories": {
+        "hospital": 201,
+        "clinic": 202,
+        "doctors": 203,
+        "dentist": 204,
+        "pharmacy": 205,
+        "physiotherapist": 206,
+        "laboratory": 207,
+        "blood_bank": 208,
+        "nursing_home": 209,
+        "social_facility": 210,
+        "optician": 211,
+        "rehabilitation": 212
+        }
+    },
+    "historic": {
+        "code": 220,
+        "subcategories": {
+        "monument": 221,
+        "memorial": 222,
+        "archaeological_site": 223,
+        "castle": 224,
+        "ruins": 225,
+        "fort": 226,
+        "heritage": 227
+        }
+    },
+    "leisure_and_entertainment": {
+        "code": 260,
+        "subcategories": {
+        "park": 261,
+        "playground": 262,
+        "sports_centre": 263,
+        "stadium": 264,
+        "fitness_centre": 265,
+        "swimming_pool": 266,
+        "cinema": 267,
+        "theatre": 268,
+        "nightclub": 269,
+        "amusement_arcade": 270,
+        "bowling_alley": 271,
+        "escape_game": 272,
+        "garden": 273,
+        "beach_resort": 274,
+        "marina": 275
+        }
+    },
+    "natural": {
+        "code": 330,
+        "subcategories": {
+        "forest": 331,
+        "beach": 332,
+        "water": 333,
+        "wetland": 334,
+        "grassland": 335,
+        "peak": 336,
+        "cave": 337,
+        "cliff": 338,
+        "volcano": 339
+        }
+    },
+    "public_places": {
+        "code": 360,
+        "subcategories": {
+        "square": 361,
+        "plaza": 362,
+        "community_centre": 363,
+        "townhall": 364,
+        "courthouse": 365,
+        "embassy": 366,
+        "post_office": 367,
+        "police": 368,
+        "fire_station": 369,
+        "place_of_worship": 370,
+        "cemetery": 371
+        }
+    },
+    "service": {
+        "code": 390,
+        "subcategories": {
+        "hairdresser": 391,
+        "beauty_salon": 392,
+        "laundry": 393,
+        "dry_cleaning": 394,
+        "repair": 395,
+        "locksmith": 396,
+        "tailor": 397,
+        "travel_agency": 398,
+        "car_rental": 399,
+        "bicycle_repair_station": 400
+        }
+    },
+    "shops": {
+        "code": 420,
+        "subcategories": {
+        "supermarket": 421,
+        "convenience": 422,
+        "grocery": 423,
+        "bakery": 424,
+        "butcher": 425,
+        "greengrocer": 426,
+        "mall": 427,
+        "department_store": 428,
+        "clothes": 429,
+        "shoes": 430,
+        "electronics": 431,
+        "hardware": 432,
+        "furniture": 433,
+        "pharmacy_shop": 434,
+        "books": 435,
+        "florist": 436,
+        "jewelry": 437,
+        "sports": 438,
+        "bicycle": 439,
+        "mobile_phone": 440,
+        "pet": 441
+        }
+    },
+    "sustenance": {
+        "code": 560,
+        "subcategories": {
+        "restaurant": 561,
+        "cafe": 562,
+        "fast_food": 563,
+        "bar": 564,
+        "pub": 565,
+        "food_court": 566,
+        "ice_cream": 567,
+        "biergarten": 568,
+        "marketplace": 569
+        }
+    },
+    "transport": {
+        "code": 580,
+        "subcategories": {
+        "bus_stop": 581,
+        "tram_stop": 582,
+        "railway_station": 583,
+        "subway_station": 584,
+        "ferry_terminal": 585,
+        "taxi": 586,
+        "bicycle_rental": 587,
+        "bicycle_parking": 588,
+        "parking": 589,
+        "fuel": 590,
+        "charging_station": 591,
+        "airport": 592
+        }
+    },
+    "tourism": {
+        "code": 620,
+        "subcategories": {
+        "attraction": 621,
+        "viewpoint": 622,
+        "information": 623,
+        "artwork": 624,
+        "theme_park": 625,
+        "zoo": 626,
+        "aquarium": 627,
+        "picnic_site": 628,
+        "camp_site": 629
+        }
+    }
+}

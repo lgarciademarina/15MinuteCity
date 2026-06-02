@@ -1,0 +1,96 @@
+
+{
+  "supply": {
+      "categories": {
+        "supermarket": 518,
+        "convenience": 451,
+        "grocery": 475,
+        "bakery": 426,
+        "marketplace": 493
+      },
+      "color": "#F15BB5",
+      "weight": 0.2
+  },
+
+  "healthcare": {
+    "categories": {
+      "clinic": 202,
+      "pharmacy": 208,
+      "dentist": 203,
+      "doctors": 204,
+      "hospital": 206
+    },
+    "color": "#8338EC",
+    "weight": 0.1
+  },
+
+  "education": {
+      "categories": {
+        "kindergarten": 153,
+        "childcare": 152,
+        "school": 156,
+        "library": 133
+      },
+      "color": "#3A86FF",
+      "weight": 0.1
+  },
+
+  "mobility": {
+    "categories": {
+      "bus_stop": 581,
+      "tram_stop": 582,
+      "bus_station": 587,
+      "station": 604,
+      "bicycle":429,
+      "bicycle_rental": 584,
+      "bicycle_parking": 583,
+      "parking": 601,
+      "taxi": 606
+    },
+    "color": "#4A4E69",
+    "weight": 0.2
+  },
+
+  "green_and_public_space": {
+    "categories": {
+      "park": 280,
+      "playground": 283,
+      "garden": 272,
+      "square": 361,
+      "community_centre": 363
+    },
+    "color": "#06D6A0",
+    "weight": 0.1
+  },
+
+  "public_services": {
+    "categories": {
+      "post_office": 370,
+      "townhall": 374,
+      "police": 369,
+      "fire_station": 367
+    },
+    "color": "#E76F51",
+    "weight": 0.1
+  },
+
+  "daily_services": {
+    "categories": {
+      "atm": 191,
+      "bank": 192,
+      "hairdresser": 395,
+      "laundry": 396
+    },
+    "color":"#FFB703",
+    "weight": 0.1
+  },
+
+  "food_and_social": {
+    "categories": {
+      "restaurant": 570,
+      "cafe": 564
+    },
+    "color":"#F77F00",
+    "weight": 0.1
+  }
+}
