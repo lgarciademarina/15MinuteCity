@@ -27,8 +27,8 @@ export default function POISideMenu({
   stats,
   coordinates,
 }: Props) {
-  const [cityName, setCityName] = useState(null);
-  const [position, setPosition] = useState<{ lon: number | null; lat: number | null; }>({ lon: null, lat: null, });
+  const [cityName, setCityName] = useState<string | null>(null);
+  const [position, setPosition] = useState<{ lon: number | null; lat: number | null; }>({ lon: null, lat: null });
       
   useEffect(() => {
     if ( !coordinates?.length || coordinates.length !== 2 ) return;
@@ -49,16 +49,20 @@ export default function POISideMenu({
 
   
   // Prepare data for category group chart
-  let categoryGroupData = {}, categoryNameData = {};
+  type CategoryGroupEntry = { originalName: string; name: string; value: number };
+  type CategoryNameEntry = { name: string; value: number; percentage: string };
+
+  let categoryGroupData: CategoryGroupEntry[] = [];
+  let categoryNameData: CategoryNameEntry[] = [];
   if (stats) {
     categoryGroupData = Object.entries(stats.byCategoryGroup).map(([name, value]) => ({
       originalName: name,
       name: name.charAt(0).toUpperCase() + name.slice(1).replaceAll('_', ' '), 
-      value: value
+      value: value as number
       }));
   
     // Prepare data for category name chart (top 10) with percentages
-    const totalValue = Object.values(stats.byCategoryName).reduce((sum, val) => sum + (val as number), 0);
+    const totalValue = (Object.values(stats.byCategoryName) as number[]).reduce((sum: number, val: number) => sum + val, 0);
     categoryNameData = Object.entries(stats.byCategoryName)
       .sort(([,a], [,b]) => (b as number) - (a as number))
       .slice(0, 10)
@@ -227,7 +231,7 @@ export default function POISideMenu({
                   fill="#8884d8"
                   dataKey="value"
                   style={{ fontSize: '10px' }}
-                  label={({ name, percentage }) => `${name} (${percentage}%)`}
+                  label={(props: any) => `${props.name} (${props.payload?.percentage}%)`}
                 >
                   {categoryNameData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={categoryToColor[entry.name] || '#8884d8'} />

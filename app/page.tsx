@@ -14,7 +14,7 @@ export default function Page() {
     }, []);
 
     useEffect(() => {
-        if (!hasMounted || !blocking) return;
+        if (!hasMounted || !blocking || !window.IDEE) return;
 
         const handleInit = () => {
             setBlocking(false);
