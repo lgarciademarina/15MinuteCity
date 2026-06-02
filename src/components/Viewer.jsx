@@ -7,7 +7,7 @@ import POISideMenu from './POISideMenu';
 
 const fetchPOIs = async (polygon) => {
     
-    const request = await fetch(`/15MinuteCity/api/poi?polygon=${polygon}`);
+    const request = await fetch(`/api/poi?polygon=${polygon}`);
     const data = await request.json();
     
     // Remove duplicates based on osm_id
@@ -394,7 +394,7 @@ const Viewer = () => {
 
         setCoordinates(evt.coord);
         const [lon, lat] = window.ol.proj.transform(evt.coord, 'EPSG:3857', mouseProjection);
-        let response = await fetch(`/15MinuteCity/api/isochrone?lat=${lat}&lon=${lon}`);
+        let response = await fetch(`/api/isochrone?lat=${lat}&lon=${lon}`);
         let isochrones_data = await response.json();
         mapjs.addLayers(new window.IDEE.layer.GeoJSON({
             name: 'Isochrone',
