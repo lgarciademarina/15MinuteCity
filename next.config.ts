@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
   basePath: "/15MinuteCity",
   assetPrefix: "/15MinuteCity",
   trailingSlash: false,
+  redirects: async () => [
+    {
+      source: "/",
+      destination: "/15MinuteCity",
+      permanent: true,
+    },
+  ],
 };
 
 export default nextConfig;
