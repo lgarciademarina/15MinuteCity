@@ -75,7 +75,8 @@ body>div.app-container {
 }
 
 #map {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100svh;
 }
 
 #m-ignsearch-panel {
