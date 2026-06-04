@@ -551,7 +551,7 @@ const Viewer = () => {
         {/* POI Drawer */}
         <div
           className={`
-            absolute sm:static top-0 left-0 h-full w-full sm:w-1/3 min-w-[400px] 
+            absolute sm:static top-0 left-0 h-full w-full sm:w-1/3 sm:min-w-[400px] max-w-full
             bg-[var(--background)] shadow-lg z-40
             transform transition-transform duration-300
             ${menuOpen ? "translate-x-0" : "-translate-x-full"}
