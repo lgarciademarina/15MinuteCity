@@ -74,13 +74,13 @@ export default function POISideMenu({
   }
 
   return (
-    <div className="w-full h-full bg-[var(--background)] shadow-lg overflow-y-auto">
-      <div className="p-4 border-b sticky top-0 bg-[var(--background)] z-10">
+    <div className="w-full h-full bg-background shadow-lg overflow-y-auto">
+      <div className="p-4 border-b sticky top-0 bg-background z-10 border-b border-surface">
       {cityName ? (
           <div className="flex flex-col justify-between items-center justify-center">
             <h2 className="text-2xl font-bold">{cityName.toUpperCase()}</h2>
             {position.lon && position.lat && (
-              <div className="mt-1 font-mono text-xs text-gray-500">
+              <div className="mt-1 font-mono text-xs text-muted">
                   {`lon: ${position.lon.toFixed(6)}, lat: ${position.lat.toFixed(6)}`}
               </div>
             )}
@@ -101,8 +101,8 @@ export default function POISideMenu({
 
         {/* Summary Stats */}
         {!stats ? (
-          <div className="flex flex-col items-center justify-center text-center text-gray-500 px-6 my-20">
-          <div className="text-lg font-semibold mb-2">
+          <div className="flex flex-col items-center justify-center text-center text-muted px-6 my-20">
+          <div className="text-lg font-semibold mb-2 text-foreground">
             No data available
           </div>
       
@@ -113,26 +113,26 @@ export default function POISideMenu({
         ) : (
         <>
           <div className="mb-6">
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg border">
+            <div className="bg-surface-strong p-4 rounded-lg border border-surface">
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600 mb-1">{stats.fifteenMinIndex.overallScore}/100</div>
-                <div className="text-sm text-gray-600">Overall Score</div>
+                <div className="text-3xl font-bold text-green-400 mb-1">{stats.fifteenMinIndex.overallScore}/100</div>
+                <div className="text-sm text-muted">Overall Score</div>
               </div>
               <div className="grid grid-cols-2 gap-3 mt-4 text-sm">
                 <div>
-                  <span className="text-gray-600">Accessibility:</span>
+                  <span className="text-muted">Accessibility:</span>
                   <span className="font-medium ml-1">{(stats.fifteenMinIndex.accessibilityScore * 100).toFixed(0)}%</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Diversity:</span>
+                  <span className="text-muted">Diversity:</span>
                   <span className="font-medium ml-1">{(stats.diversity.categoryRichness * 100).toFixed(0)}%</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Reachability:</span>
+                  <span className="text-muted">Reachability:</span>
                   <span className="font-medium ml-1">{(stats.reachability.reachabilityScore * 100).toFixed(0)}%</span>
                 </div>
                 <div>
-                  <span className="text-gray-600">Redundancy:</span>
+                  <span className="text-muted">Redundancy:</span>
                   <span className="font-medium ml-1">{(stats.fifteenMinIndex.redundancyScore * 100).toFixed(0)}%</span>
                 </div>
               </div>
@@ -140,15 +140,15 @@ export default function POISideMenu({
           </div>
 
           <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-3">Summary</h3>
+            <h3 className="text-lg font-semibold mb-3 text-foreground">Summary</h3>
             <div className="grid grid-cols-2 gap-4">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600">{stats.total}</div>
-                <div className="text-sm text-gray-600">Total POIs</div>
+              <div className="bg-surface p-3 rounded-lg border border-surface">
+                <div className="text-2xl font-bold text-blue-400">{stats.total}</div>
+                <div className="text-sm text-muted">Total POIs</div>
               </div>
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="text-2xl font-bold text-blue-600">{stats.diversity.uniqueCategories}/{stats.reachability.totalCategories}</div>
-                <div className="text-sm text-gray-600">Categories Reachable</div>
+              <div className="bg-surface p-3 rounded-lg border border-surface">
+                <div className="text-2xl font-bold text-blue-400">{stats.diversity.uniqueCategories}/{stats.reachability.totalCategories}</div>
+                <div className="text-sm text-muted">Categories Reachable</div>
               </div>
             </div>
             <div className="grid grid-cols-3 gap-3 mt-3">
@@ -172,23 +172,23 @@ export default function POISideMenu({
 
           {/* Travel Time Statistics */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-3">Travel Time Analysis</h3>
+            <h3 className="text-lg font-semibold mb-3 text-foreground">Travel Time Analysis</h3>
             <div className="grid grid-cols-2 gap-3">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="text-lg font-bold text-blue-600">{stats.travelTime.averageTime.toFixed(1)} min</div>
-                <div className="text-xs text-gray-600">Average Time</div>
+              <div className="bg-surface p-3 rounded-lg border border-surface">
+                <div className="text-lg font-bold text-blue-400">{stats.travelTime.averageTime.toFixed(1)} min</div>
+                <div className="text-xs text-muted">Average Time</div>
               </div>
-              <div className="bg-purple-50 p-3 rounded-lg">
-                <div className="text-lg font-bold text-purple-600">{stats.travelTime.medianTime.toFixed(1)} min</div>
-                <div className="text-xs text-gray-600">Median Time</div>
+              <div className="bg-surface p-3 rounded-lg border border-surface">
+                <div className="text-lg font-bold text-purple-400">{stats.travelTime.medianTime.toFixed(1)} min</div>
+                <div className="text-xs text-muted">Median Time</div>
               </div>
-              <div className="bg-green-50 p-3 rounded-lg">
-                <div className="text-lg font-bold text-green-600">{stats.travelTime.minTime.toFixed(1)} min</div>
-                <div className="text-xs text-gray-600">Fastest Access</div>
+              <div className="bg-surface p-3 rounded-lg border border-surface">
+                <div className="text-lg font-bold text-green-400">{stats.travelTime.minTime.toFixed(1)} min</div>
+                <div className="text-xs text-muted">Fastest Access</div>
               </div>
-              <div className="bg-orange-50 p-3 rounded-lg">
-                <div className="text-lg font-bold text-orange-600">{stats.travelTime.maxTime.toFixed(1)} min</div>
-                <div className="text-xs text-gray-600">Slowest Access</div>
+              <div className="bg-surface p-3 rounded-lg border border-surface">
+                <div className="text-lg font-bold text-orange-400">{stats.travelTime.maxTime.toFixed(1)} min</div>
+                <div className="text-xs text-muted">Slowest Access</div>
               </div>
             </div>
             
@@ -247,8 +247,8 @@ export default function POISideMenu({
             <h3 className="text-lg font-semibold mb-3">Category Accessibility</h3>
             <div className="space-y-2">
               {Object.entries(stats.fifteenMinIndex.categoryScores).map(([category, score]) => (
-                <div key={category} className="flex justify-between items-center p-2 bg-gray-50 rounded">
-                  <span className="capitalize text-sm">{category.replaceAll('_', ' ')}</span>
+                <div key={category} className="flex justify-between items-center p-2 bg-surface rounded border border-surface">
+                  <span className="capitalize text-sm text-foreground">{category.replaceAll('_', ' ')}</span>
                   <div className="flex items-center gap-2">
                     <div className="font-medium text-sm">{stats.byCategoryGroup[category]}</div>
                     <div className={`w-3 h-3 rounded-full ${score === 1 ? 'bg-green-500' : 'bg-red-500'}`}></div>
