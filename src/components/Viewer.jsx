@@ -565,9 +565,9 @@ const Viewer = () => {
         </div>
 
         {/* Map */}
-        <div id="map" className="w-full h-full" />
+        <div id="map" className={`w-screen h-screen ${menuOpen ? 'hidden sm:block' : ''}`} />
         { poiStats && (
-          <div className="absolute bottom-4 right-4 z-50 max-w-[220px] rounded-xl border border-slate-200 bg-white/85 p-3 text-xs shadow-lg backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 dark:text-slate-100">
+          <div className={`absolute bottom-4 right-4 z-50 max-w-[220px] rounded-xl border border-slate-200 bg-white/85 p-3 text-xs shadow-lg backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 dark:text-slate-100 ${menuOpen ? 'hidden sm:block' : ''}`}>
             <div className="font-semibold mb-2 text-sm">Isochrone legend</div>
             <div className="space-y-2">
               <div className="flex items-center gap-2">
