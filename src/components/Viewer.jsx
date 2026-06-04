@@ -566,7 +566,25 @@ const Viewer = () => {
 
         {/* Map */}
         <div id="map" className="w-full h-full" />
-
+        { poiStats && (
+          <div className="absolute bottom-4 right-4 z-50 max-w-[220px] rounded-xl border border-slate-200 bg-white/85 p-3 text-xs shadow-lg backdrop-blur-sm dark:border-slate-700 dark:bg-slate-900/85 dark:text-slate-100">
+            <div className="font-semibold mb-2 text-sm">Isochrone legend</div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <span className="inline-block h-3 w-3 rounded-sm" style={{ backgroundColor: 'rgba(0, 255, 0, 0.5)' }} />
+                <span>≤ 5 min walking</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-block h-3 w-3 rounded-sm" style={{ backgroundColor: 'rgba(255, 255, 0, 0.5)' }} />
+                <span>≤ 10 min walking</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="inline-block h-3 w-3 rounded-sm" style={{ backgroundColor: 'rgba(255, 165, 0, 0.5)' }} />
+                <span>≤ 15 min walking</span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
 };
