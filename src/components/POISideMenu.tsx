@@ -74,8 +74,8 @@ export default function POISideMenu({
   }
 
   return (
-    <div className="w-full h-full bg-white shadow-lg overflow-y-auto">
-      <div className="p-4 border-b sticky top-0 bg-white z-10">
+    <div className="w-full h-full bg-[var(--background)] shadow-lg overflow-y-auto">
+      <div className="p-4 border-b sticky top-0 bg-[var(--background)] z-10">
       {cityName ? (
           <div className="flex flex-col justify-between items-center justify-center">
             <h2 className="text-2xl font-bold">{cityName.toUpperCase()}</h2>
